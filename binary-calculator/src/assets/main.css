@@ -1,0 +1,201 @@
+:root {
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  color: #212529;
+  background-color: #f5f7fa;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.app-container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+
+.app-header h1 {
+  letter-spacing: -0.5px;
+}
+
+.calculator-card {
+  background-color: #ffffff;
+}
+
+.binary-field {
+  font-family: "Courier New", monospace;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.operation-selector .btn {
+  min-height: 48px;
+}
+
+.operation-symbol {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-right: 0.25rem;
+}
+
+.result-panel {
+  background-color: #ffffff;
+}
+
+.result-main {
+  background-color: #f8f9fa;
+  border-radius: 0.75rem;
+}
+
+.result-binary {
+  font-family: "Courier New", monospace;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 2px;
+  overflow-wrap: anywhere;
+}
+
+.result-decimal {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  color: #6c757d;
+}
+
+.conversion-display {
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+}
+
+.conversion-value {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: "Courier New", monospace;
+  font-size: 1.05rem;
+  font-weight: 600;
+  flex-wrap: wrap;
+}
+
+.binary-value {
+  overflow-wrap: anywhere;
+}
+
+.conversion-equals {
+  color: #6c757d;
+}
+
+.operation-display {
+  width: fit-content;
+  min-width: 280px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  background-color: #f8f9fa;
+  border-radius: 0.75rem;
+  font-family: "Courier New", monospace;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.operation-display hr {
+  margin: 0.25rem 0;
+  border-color: #212529;
+  opacity: 0.75;
+}
+
+.multiplication-display {
+  min-width: 320px;
+}
+
+.partial-product {
+  color: #495057;
+}
+
+.complement-step {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.step-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #f8f9fa;
+}
+
+.step-row code {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.result-step {
+  background-color: #e9f7ef;
+  border: 1px solid #badbcc;
+}
+
+.empty-state {
+  color: #495057;
+}
+
+.empty-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 80px;
+  height: 80px;
+
+  border-radius: 50%;
+
+  background-color: #e9ecef;
+
+  font-family: "Courier New", monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media (max-width: 767.98px) {
+  .app-container {
+    width: 94%;
+    padding-top: 2rem;
+  }
+
+  .operation-selector .btn {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .operation-display {
+    min-width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .step-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
